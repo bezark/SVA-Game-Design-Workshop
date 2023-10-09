@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxf3tm2pb05q7"]
+
+[ext_resource type="Script" path="res://Character.gd" id="1_sx16d"]
+[ext_resource type="Texture2D" uid="uid://bsxt3h56mkq8k" path="res://icon.svg" id="2_ep4ea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1o5x"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_du4oc"]
+size = Vector2(736, 103)
+
+[node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Character" type="CharacterBody2D" parent="."]
+script = ExtResource("1_sx16d")
+SPEED = 600.0
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Character"]
+texture = ExtResource("2_ep4ea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_j1o5x")
+
+[node name="Platform" type="RigidBody2D" parent="."]
+position = Vector2(0, 552)
+freeze = true
+
+[node name="ColorRect" type="ColorRect" parent="Platform"]
+offset_right = 733.0
+offset_bottom = 103.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(367, 51)
+shape = SubResource("RectangleShape2D_du4oc")
