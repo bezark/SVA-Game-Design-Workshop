@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bms027a2t763j"]
+
+[ext_resource type="Script" path="res://Slideshow.gd" id="1_0ejw5"]
+[ext_resource type="PackedScene" uid="uid://bbfyrwe151xh7" path="res://slide.tscn" id="2_3xeet"]
+
+[node name="Slideshow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ejw5")
+
+[node name="Slide" parent="." instance=ExtResource("2_3xeet")]
+layout_mode = 1
+
+[node name="Slide2" parent="." instance=ExtResource("2_3xeet")]
+layout_mode = 1
+
+[node name="RichTextLabel" parent="Slide2/AspectRatioContainer/MarginContainer" index="0"]
+text = "Cool Information!"
+
+[node name="Slide3" parent="." instance=ExtResource("2_3xeet")]
+layout_mode = 1
+
+[node name="RichTextLabel" parent="Slide3/AspectRatioContainer/MarginContainer" index="0"]
+text = "Cool Information!!!"
+
+[editable path="Slide2"]
+[editable path="Slide3"]
