@@ -1,4 +1,8 @@
+[Slides](https://docs.google.com/presentation/d/1YeXt_8IO_EzlXb0UylCWOclUW92ByHwQxio7gbigmhs/edit?usp=sharing)
 
+Schedule:
+- 2:30 - 3:00 Intros
+- 
 # What is a game?
 
 - Mechanics, Dynamics, Aesthetics Framework
