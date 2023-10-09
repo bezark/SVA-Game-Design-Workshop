@@ -1,11 +1,11 @@
-- Week 1: What is a game?
+# What is a game?
 
 - Mechanics, Dynamics, Aesthetics Framework
 - Bernard Suits Definition of a game
 - Different types of games
 - Activities:
 
-- Paper prototyping
+# Paper prototyping
 
 - Assignment: Make a paper prototype of a game and test it.
 - Molly Bang Visual Language and Image Research
