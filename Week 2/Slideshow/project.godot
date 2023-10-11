@@ -14,3 +14,7 @@ config/name="Slideshow"
 run/main_scene="res://slideshow.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
