@@ -37,13 +37,13 @@
 - Provide feedback on gameplay, level design, and overall experience
 - Discuss the importance of iterative design
 
-Prototyping in VR (30 minutes)
+## Prototyping in VR (30 minutes)
 
 - Introduction to virtual reality (VR) in game design
 - Discuss the basics of creating a VR experience in Godot
 - Participants create a simple VR prototype based on their earlier greybox level
 
-**Wrap-up and Q&A (10 minutes)**
+## Wrap-up and Q&A (10 minutes)
 
 - Recap key takeaways from the workshop
 - Answer participants' questions and provide resources for further learning
