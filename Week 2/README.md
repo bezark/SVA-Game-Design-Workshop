@@ -1,5 +1,7 @@
 - [Godot Game Engine](https://godotengine.org/)
-
+- [itch.io](https://itch.io/game-assets)
+    - [Sprout Lands by Cup Noodle](https://cupnooble.itch.io/sprout-lands-asset-pack)
+    - [Pixel Adventure](https://pixelfrog-assets.itch.io/pixel-adventure-1)
   **2D Game Design Workshop in Godot Engine (3 Hours)**
 
   ## Introduction and Installation (15 minutes)
