@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bi4vnytdmm0g2"]
+[gd_scene load_steps=43 format=3 uid="uid://bi4vnytdmm0g2"]
 
 [ext_resource type="Texture2D" uid="uid://elhe17wqnbtv" path="res://Assets/Main Characters/Ninja Frog/Idle (32x32).png" id="1_147w3"]
 [ext_resource type="Script" path="res://Player.gd" id="1_s0exn"]
@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dkksl6k7n82at" path="res://Assets/Main Characters/Ninja Frog/Jump (32x32).png" id="3_ruxgh"]
 [ext_resource type="Texture2D" uid="uid://dqlon1omwircu" path="res://Assets/Other/Dust Particle.png" id="7_lnho4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_js1fu"]
-size = Vector2(22, 26)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nua6x"]
+radius = 11.0
+height = 28.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00u51"]
 atlas = ExtResource("2_yske5")
@@ -161,7 +162,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"die",
-"speed": 10.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -259,42 +260,6 @@ animations = [{
 "speed": 13.0
 }]
 
-[sub_resource type="Animation" id="Animation_bdjlk"]
-resource_name = "Death"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Animation Player:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"idle", &"die"]
-}
-
-[sub_resource type="Animation" id="Animation_a46e1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Animation Player:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wuf8"]
-_data = {
-"Death": SubResource("Animation_bdjlk"),
-"RESET": SubResource("Animation_a46e1")
-}
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p531o"]
 particles_animation = true
 particles_anim_h_frames = 1
@@ -326,23 +291,18 @@ anim_speed_max = 1.1
 script = ExtResource("1_s0exn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -13)
-shape = SubResource("RectangleShape2D_js1fu")
+position = Vector2(0, -13)
+shape = SubResource("CapsuleShape2D_nua6x")
 
 [node name="Animation Player" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_q4b7y")
-animation = &"idle"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation Player"]
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_3wuf8")
-}
+animation = &"die"
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -40)
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 
 [node name="Clouds" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_p531o")
