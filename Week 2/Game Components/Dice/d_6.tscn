@@ -56,8 +56,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdlcb"]
 size = Vector2(129, 128)
 
-[node name="D6" type="RigidBody2D"]
+[node name="Dice" type="RigidBody2D"]
 input_pickable = true
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_dy6st")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
@@ -71,5 +73,14 @@ one_shot = true
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_bdlcb")
 
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = -64.0
+offset_top = -66.0
+offset_right = 66.0
+offset_bottom = 64.0
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="timeout" from="RollTimer" to="." method="_on_roll_timer_timeout"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

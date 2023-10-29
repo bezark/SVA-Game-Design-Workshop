@@ -1,4 +1,5 @@
 extends Button
+@onready var dice = $"../Dice"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +16,7 @@ func _process(delta):
 #	print("yo")
 
 func _pressed():
-	var children = get_children()
+	var children = dice.get_children()
 #	print(children)
 	for child in children:
 		child.roll()
