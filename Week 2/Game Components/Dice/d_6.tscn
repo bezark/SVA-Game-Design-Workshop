@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://joc5ti0wrk2i"]
+
+[ext_resource type="Script" path="res://Dice/D6.gd" id="1_dy6st"]
+[ext_resource type="Texture2D" uid="uid://cpjv2lx4gtrj8" path="res://Dice/D6.png" id="2_u2i5h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imlhr"]
+atlas = ExtResource("2_u2i5h")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k76x"]
+atlas = ExtResource("2_u2i5h")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6uqd"]
+atlas = ExtResource("2_u2i5h")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yfml"]
+atlas = ExtResource("2_u2i5h")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2h8f"]
+atlas = ExtResource("2_u2i5h")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkldd"]
+atlas = ExtResource("2_u2i5h")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r26oo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imlhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k76x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6uqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yfml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2h8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkldd")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdlcb"]
+size = Vector2(129, 128)
+
+[node name="D6" type="RigidBody2D"]
+input_pickable = true
+script = ExtResource("1_dy6st")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r26oo")
+animation = &"roll"
+
+[node name="RollTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_bdlcb")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="timeout" from="RollTimer" to="." method="_on_roll_timer_timeout"]

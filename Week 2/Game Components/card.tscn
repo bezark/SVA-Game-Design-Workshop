@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://4s1gohqxdcm0"]
+
+[node name="Card" type="Node2D"]
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+offset_right = 186.0
+offset_bottom = 260.0
+ratio = 0.7143
+stretch_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="AspectRatioContainer"]
+layout_mode = 2
+color = Color(0.160784, 0.160784, 0.160784, 1)

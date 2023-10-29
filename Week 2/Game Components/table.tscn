@@ -1,0 +1,209 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0e8x0f3civ7v"]
+
+[ext_resource type="PackedScene" uid="uid://joc5ti0wrk2i" path="res://Dice/d_6.tscn" id="1_mrd5r"]
+[ext_resource type="Script" path="res://RollDice.gd" id="2_i7x7h"]
+
+[sub_resource type="Gradient" id="Gradient_o6e52"]
+colors = PackedColorArray(0, 0.264767, 0, 1, 0, 0.215686, 0.00392157, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_py1ro"]
+noise_type = 0
+frequency = 0.1528
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ubs4c"]
+color_ramp = SubResource("Gradient_o6e52")
+noise = SubResource("FastNoiseLite_py1ro")
+
+[node name="TABLE" type="Node2D"]
+
+[node name="Felt" type="Sprite2D" parent="."]
+position = Vector2(579.5, 321)
+scale = Vector2(2.26367, 1.27344)
+texture = SubResource("NoiseTexture2D_ubs4c")
+
+[node name="Dice" type="Node2D" parent="."]
+
+[node name="RollDice" type="Button" parent="."]
+offset_left = 73.0
+offset_top = 25.0
+offset_right = 215.0
+offset_bottom = 74.0
+text = "Roll all!"
+script = ExtResource("2_i7x7h")
+
+[node name="D6" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(269, 90)
+freeze = true
+freeze_mode = 1
+
+[node name="D7" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(347, 287)
+freeze = true
+freeze_mode = 1
+
+[node name="D8" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(432, 150)
+freeze = true
+freeze_mode = 1
+
+[node name="D9" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(178, 301)
+freeze = true
+freeze_mode = 1
+
+[node name="D10" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(495, 290)
+freeze = true
+freeze_mode = 1
+
+[node name="D11" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(562, 485)
+freeze = true
+freeze_mode = 1
+
+[node name="D12" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(721, 346)
+freeze = true
+freeze_mode = 1
+
+[node name="D13" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(394, 445)
+freeze = true
+freeze_mode = 1
+
+[node name="D14" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(684, 76)
+rotation = 0.153087
+freeze = true
+freeze_mode = 1
+
+[node name="D15" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(704, 187)
+freeze = true
+freeze_mode = 1
+
+[node name="D16" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(854, 40)
+freeze = true
+freeze_mode = 1
+
+[node name="D17" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(27, 134)
+freeze = true
+freeze_mode = 1
+
+[node name="D18" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(917, 180)
+freeze = true
+freeze_mode = 1
+
+[node name="D19" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(1001, 337)
+freeze = true
+freeze_mode = 1
+
+[node name="D20" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(160, 454)
+freeze = true
+freeze_mode = 1
+
+[node name="D21" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(897, 341)
+freeze = true
+freeze_mode = 1
+
+[node name="D22" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(405, 44)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D23" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(471, 329)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D24" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(35, 318)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D25" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(302, 343)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D26" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(619, 332)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D27" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(686, 527)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D28" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(845, 388)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D29" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(518, 487)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D30" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(569, 56)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D31" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(557, 167)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D32" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(978, 82)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D33" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(151, 176)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D34" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(842, 219)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D35" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(823, 524)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D36" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(284, 496)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
+
+[node name="D37" parent="RollDice" instance=ExtResource("1_mrd5r")]
+position = Vector2(916, 465)
+rotation = 0.481396
+freeze = true
+freeze_mode = 1
