@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends AnimatableBody2D
 
 var value = 1
 var selected = false
@@ -15,6 +15,8 @@ func follow_mouse():
 func roll():
 	$Animation.play("roll")
 	$RollTimer.start()
+	var tween = get_tree().create_tween()
+	tween.tween_property(self,"rotation", 2*PI, 1)
 
 func _on_roll_timer_timeout():
 	$Animation.stop()

@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://joc5ti0wrk2i"]
+[gd_scene load_steps=12 format=3 uid="uid://joc5ti0wrk2i"]
 
 [ext_resource type="Script" path="res://Dice/D6.gd" id="1_dy6st"]
 [ext_resource type="Texture2D" uid="uid://cpjv2lx4gtrj8" path="res://Dice/D6.png" id="2_u2i5h"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ljecc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_imlhr"]
 atlas = ExtResource("2_u2i5h")
@@ -56,10 +58,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdlcb"]
 size = Vector2(129, 128)
 
-[node name="Dice" type="RigidBody2D"]
+[node name="Dice" type="AnimatableBody2D"]
 input_pickable = true
-freeze = true
-freeze_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_ljecc")
 script = ExtResource("1_dy6st")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
