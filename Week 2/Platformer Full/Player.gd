@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal spawning
+
 @onready var animation_player = $"Animation Player"
 
 const SPEED = 300.0
@@ -62,6 +64,7 @@ func _physics_process(delta):
 func respawn():
 	position = respawn_point.position
 	print("respawning")
+	emit_signal("spawning")
 	gravity = default_gravity
 	alive = true
 	move_and_slide()
