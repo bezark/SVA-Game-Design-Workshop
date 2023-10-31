@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0e8x0f3civ7v"]
+[gd_scene load_steps=8 format=3 uid="uid://c0e8x0f3civ7v"]
 
 [ext_resource type="PackedScene" uid="uid://joc5ti0wrk2i" path="res://Dice/d_6.tscn" id="1_mrd5r"]
 [ext_resource type="Script" path="res://RollDice.gd" id="2_i7x7h"]
-[ext_resource type="Texture2D" uid="uid://bxklvn58nqkfk" path="res://icon.svg" id="3_ataoq"]
 
 [sub_resource type="Gradient" id="Gradient_o6e52"]
 colors = PackedColorArray(0, 0.264767, 0, 1, 0, 0.215686, 0.00392157, 1)
@@ -21,9 +20,6 @@ size = Vector2(1206, 76)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6bcj"]
 size = Vector2(91, 668)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_njb7c"]
-size = Vector2(131, 128)
-
 [node name="TABLE" type="Node2D"]
 
 [node name="Felt" type="Sprite2D" parent="."]
@@ -32,6 +28,12 @@ scale = Vector2(2.26367, 1.27344)
 texture = SubResource("NoiseTexture2D_ubs4c")
 
 [node name="Dice" type="Node2D" parent="."]
+
+[node name="D6" parent="Dice" instance=ExtResource("1_mrd5r")]
+position = Vector2(438, 140)
+
+[node name="D7" parent="Dice" instance=ExtResource("1_mrd5r")]
+position = Vector2(827, 354)
 
 [node name="D8" parent="Dice" instance=ExtResource("1_mrd5r")]
 position = Vector2(483, 315)
@@ -67,14 +69,3 @@ shape = SubResource("RectangleShape2D_m6bcj")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Bounds/StaticBody2D"]
 position = Vector2(1199, 324)
 shape = SubResource("RectangleShape2D_m6bcj")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(427, 126)
-mass = 1000.0
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-texture = ExtResource("3_ataoq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(-0.5, -1)
-shape = SubResource("RectangleShape2D_njb7c")
