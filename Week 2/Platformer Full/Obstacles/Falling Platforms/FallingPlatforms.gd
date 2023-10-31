@@ -1,6 +1,6 @@
 extends Node2D
 
-var falling_platform =preload("res://falling_platform.tscn")
+var falling_platform = preload("res://Obstacles/Falling Platforms/falling_platform.tscn")
 var positions = []
 # Called when the node enters the scene tree for the first time.
 func _ready():

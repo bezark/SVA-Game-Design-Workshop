@@ -1,46 +1,46 @@
 [gd_scene load_steps=14 format=3 uid="uid://isi15leghbp7"]
 
-[ext_resource type="Script" path="res://Saw.gd" id="1_yyshx"]
-[ext_resource type="Texture2D" uid="uid://dlcewnm3e2yxa" path="res://Assets/Traps/Saw/Off.png" id="2_h5u36"]
-[ext_resource type="Texture2D" uid="uid://cgeobiop1sbkc" path="res://Assets/Traps/Saw/On (38x38).png" id="3_acks7"]
+[ext_resource type="Script" path="res://Obstacles/Saws/Saw.gd" id="1_44rsy"]
+[ext_resource type="Texture2D" uid="uid://dlcewnm3e2yxa" path="res://Assets/Traps/Saw/Off.png" id="2_tdu07"]
+[ext_resource type="Texture2D" uid="uid://cgeobiop1sbkc" path="res://Assets/Traps/Saw/On (38x38).png" id="3_a45il"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v5wfd"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(0, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02d3x"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(38, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ckutd"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(76, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a6wjn"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(114, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dkoh7"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(152, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_id4qy"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(190, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7clyr"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(228, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8hq6"]
-atlas = ExtResource("3_acks7")
+atlas = ExtResource("3_a45il")
 region = Rect2(266, 0, 38, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8xc3l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_h5u36")
+"texture": ExtResource("2_tdu07")
 }],
 "loop": true,
 "name": &"off",
@@ -81,7 +81,7 @@ radius = 20.0
 
 [node name="Saw" type="Node2D"]
 z_index = -1
-script = ExtResource("1_yyshx")
+script = ExtResource("1_44rsy")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8xc3l")

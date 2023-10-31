@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cf88d6uciisll"]
 
-[ext_resource type="PackedScene" uid="uid://isi15leghbp7" path="res://saw.tscn" id="1_pauxm"]
-[ext_resource type="Script" path="res://moving_saw.gd" id="1_wpyvl"]
+[ext_resource type="PackedScene" uid="uid://isi15leghbp7" path="res://Obstacles/Saws/saw.tscn" id="1_pauxm"]
+[ext_resource type="Script" path="res://Obstacles/Saws/moving_saw.gd" id="1_wpyvl"]
 
 [sub_resource type="Curve2D" id="Curve2D_4joxh"]
 _data = {

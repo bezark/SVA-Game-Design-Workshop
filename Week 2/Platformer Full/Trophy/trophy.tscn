@@ -1,47 +1,47 @@
 [gd_scene load_steps=15 format=3 uid="uid://df6admmq7q3gg"]
 
-[ext_resource type="Script" path="res://Trophy.gd" id="1_supm2"]
-[ext_resource type="Texture2D" uid="uid://bargjvob5yp57" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="2_gerfb"]
-[ext_resource type="Texture2D" uid="uid://c31nh3jhm20av" path="res://Assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="3_b61jw"]
-[ext_resource type="Texture2D" uid="uid://cihiwpa0keb2p" path="res://Assets/Other/Transition.png" id="4_tucup"]
+[ext_resource type="Script" path="res://Trophy/Trophy.gd" id="1_8aihf"]
+[ext_resource type="Texture2D" uid="uid://bargjvob5yp57" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="2_fba5o"]
+[ext_resource type="Texture2D" uid="uid://c31nh3jhm20av" path="res://Assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="3_41j3a"]
+[ext_resource type="Texture2D" uid="uid://cihiwpa0keb2p" path="res://Assets/Other/Transition.png" id="4_0ofv2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qy8eq"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xtx3v"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ehqx"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4hi3"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5vtyh"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8dtq"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3qnfu"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pl4b1"]
-atlas = ExtResource("3_b61jw")
+atlas = ExtResource("3_41j3a")
 region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8dxp2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gerfb")
+"texture": ExtResource("2_fba5o")
 }],
 "loop": true,
 "name": &"default",
@@ -82,7 +82,7 @@ radius = 24.0
 height = 64.0
 
 [node name="Trophy" type="Node2D"]
-script = ExtResource("1_supm2")
+script = ExtResource("1_8aihf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
@@ -102,7 +102,7 @@ shape = SubResource("CapsuleShape2D_v1phc")
 z_index = 4
 position = Vector2(0, -32)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("4_tucup")
+texture = ExtResource("4_0ofv2")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

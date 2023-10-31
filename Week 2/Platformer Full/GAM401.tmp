@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cd1uqd3htnuxl"]
+[gd_scene load_steps=17 format=3 uid="uid://cd1uqd3htnuxl"]
 
 [ext_resource type="Texture2D" uid="uid://dpxf7k1ytye7p" path="res://Assets/Terrain/Terrain (16x16).png" id="1_ix55x"]
 [ext_resource type="PackedScene" uid="uid://bosxdi82u7c4c" path="res://background/parallax_bg.tscn" id="1_le68v"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://isi15leghbp7" path="res://Obstacles/Saws/saw.tscn" id="4_6bagl"]
 [ext_resource type="PackedScene" uid="uid://cf88d6uciisll" path="res://Obstacles/Saws/moving_saw.tscn" id="5_bl03l"]
 [ext_resource type="PackedScene" uid="uid://5bjk586as2pg" path="res://Fruit/fruit.tscn" id="5_dg3k3"]
-[ext_resource type="AudioStream" uid="uid://gunv00cij80t" path="res://audio/music.ogg" id="6_kuci6"]
 [ext_resource type="Script" path="res://Obstacles/Falling Platforms/FallingPlatforms.gd" id="7_3dw0w"]
 [ext_resource type="PackedScene" uid="uid://y6yngbo8urtf" path="res://Obstacles/Falling Platforms/falling_platform.tscn" id="7_upb8s"]
 
@@ -561,11 +560,6 @@ position = Vector2(2368, -144)
 [node name="Frog" parent="." instance=ExtResource("2_3wvxs")]
 position = Vector2(40, -88)
 
-[node name="Music" type="AudioStreamPlayer2D" parent="Frog"]
-position = Vector2(-40, 88)
-stream = ExtResource("6_kuci6")
-autoplay = true
-
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="Killbox" type="Area2D" parent="Obstacles"]
@@ -691,13 +685,13 @@ position = Vector2(248, 224)
 position = Vector2(216, 224)
 
 [node name="Fruit11" parent="Collectibles" instance=ExtResource("5_dg3k3")]
-position = Vector2(1104, -48)
+position = Vector2(1088, -48)
 
 [node name="Fruit12" parent="Collectibles" instance=ExtResource("5_dg3k3")]
-position = Vector2(1072, -48)
+position = Vector2(1056, -48)
 
 [node name="Fruit13" parent="Collectibles" instance=ExtResource("5_dg3k3")]
-position = Vector2(1040, -48)
+position = Vector2(1024, -48)
 
 [connection signal="spawning" from="Frog" to="Obstacles/FallingPlatforms" method="_on_frog_spawning"]
 [connection signal="body_entered" from="Obstacles/Killbox" to="Obstacles/Killbox" method="_on_body_entered"]
