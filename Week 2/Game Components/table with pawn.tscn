@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0e8x0f3civ7v"]
+[gd_scene load_steps=8 format=3 uid="uid://c1d37pd7t60ux"]
 
 [ext_resource type="PackedScene" uid="uid://joc5ti0wrk2i" path="res://Dice/d_6.tscn" id="1_mrd5r"]
 [ext_resource type="Script" path="res://RollDice.gd" id="2_i7x7h"]
