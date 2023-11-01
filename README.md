@@ -1,51 +1,92 @@
-- [Godot Game Engine](https://godotengine.org/)
+## Introduction and Installation (15 minutes)
+- Welcome and brief overview of the workshop
+- Github: https://bit.ly/sva-gdf
+  - Github is fancy google drive/dropbox
+- Godot Installation
+  - https://godotengine.org/
+- Warning:
+  - Game Dev is complicated
+  - We're just going to scratch the surface
+  - Might leave feeling overwhelmed and like there's a lot to learn
+  - But hopefully that learning it is straightforward and exciting
+## Introduction to the Editor (2:45-3:00)
+- Launch Godot
+- Project Manager
+  - Languages
+  - Local Projects
+  - Assets
+  - New Project
+  - Renderer
+- Key sections:
+  - Scene panel
+    - Contains all the nodes in the scene
+  - Inspector
+    - Has properties associated with the currently selected node
+  - FileSystem
+    - Interacting with the project directory
+  - Main Viewport
+    - 2D
+    - 3D
+    - Script Editor
+    - Asset Lib
+  - Topbar
+    - Help Menu
+- 2D Navigation Shortcuts
+  - Q: Select Mode
+  - W: Move Mode
+  - S: Scale Mode
+  - G/Space: Pan
+  - R: Ruler
+  - Snapping
+  - F: Center
+- Create a simple project and save it
+## Hierarchy (3:00-3:15)
+- Creating Nodes
+- Adding Nodes
+- Parents and Children
+- Scenes
+- Instantiated Scenes
+## Assets (3:15- 3:25)
 - [itch.io](https://itch.io/game-assets)
   - [Sprout Lands by Cup Noodle](https://cupnooble.itch.io/sprout-lands-asset-pack)
-  - [Pixel Adventure](https://pixelfrog-assets.itch.io/pixel-adventure-1) **2D Game Design Workshop in Godot Engine (3 Hours)**
-
-  ## Introduction and Installation (15 minutes)
-  - Welcome and brief overview of the workshop
-  - Explain the importance of Godot for 2D game design
-  - Guided installation of the Godot engine on participants' devices
-
-  ## Introduction to the Editor (15 minutes)
-  - Launch Godot engine and introduce the interface
-  - Explain key sections: Scene panel, Inspector, FileSystem, and Script Editor
-  - Create a simple project and save it
-
-  ## Nodes and Scenes (20 minutes)
-  - Explore the concept of nodes and scenes in Godot
-  - Create a new scene with a root node
-  - Add child nodes to create a basic scene structure
-
-  ## Basic Game Mechanics (15 minutes)
-  - Introduce the concept of game loops and the process function
-  - Implement basic game mechanics like player movement and input handling
-  - Demonstrate the importance of node properties and signals
-
-  **Break (10 minutes)**
-
-  ## TileMaps (20 minutes)
-  - Explain the role of TileMaps in 2D game design
-  - Create and configure a TileMap node
-  - Design and populate a simple game level using tiles
-
-  ## Building a Basic Game (20 minutes)
-  - Incorporate the scenes, mechanics, and TileMaps into a complete 2D game
-  - Add player character and interactive objects
-  - Discuss basic collision detection and physics
-
-  ## Creating Your Prototype (30 minutes)
-  - Participants create their own simple 2D game prototype
-  - Define the game concept, mechanics, and objectives
-  - Design a basic scene and implement the game mechanics
-
-  ## Playtesting and Feedback (20 minutes)
-  - Participants playtest each other's prototypes
-  - Provide constructive feedback on gameplay, controls, and overall experience
-  - Discuss the importance of iteration in game design
-
-  ## Wrap-up and Q&A (15 minutes)
-  - Recap the key takeaways from the workshop
-  - Answer participants' questions and provide resources for further learning
-  - Encourage participants to explore, experiment, and refine their 2D game design skills in Godot.
+  - [Pixel Adventure](https://pixelfrog-assets.itch.io/pixel-adventure-1)
+- Importing
+- Sprite2D
+- AnimatedSprite2D
+## Making a basic character (3:30 - 4:00)
+### Fundamental Nodes  (15 Min)
+- Node2D
+- Sprite2D
+- RigidBody2D
+- CollisionShape2D
+- Timer
+- AnimatedSprite2D
+- Area2D
+- CharacterBody2D
+### Basic Movement Mechanics (15 minutes)
+- Scripts
+- Coding Fundamentals
+  - Top to bottom
+  - Variables
+  - Functions
+- game loops
+  - process function
+  - ready funcituon
+- methods
+- Implement basic game mechanics like player movement and input handling
+- Animation
+## Break (4:00-4:10)
+## Tilemaps (4:10-4:30)
+- Setting up Tilemaps
+- Physics collisions
+- Level Design
+## Items and Signals (4:30 -5)
+- Collectibles
+- Traps?
+## Other Examples
+- Top Down
+- Components
+## Creating Your Prototype (5:00-5:25)
+- Participants create their own simple 2D game prototype
+- Define the game concept, mechanics, and objectives
+- Design a basic scene and implement the game mechanics
