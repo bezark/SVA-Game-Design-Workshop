@@ -53,7 +53,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_1wtab")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -114,8 +114,8 @@ zoom = Vector2(5, 5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7dggg")
-animation = &"walk_up"
-autoplay = "default"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_k4m4h")

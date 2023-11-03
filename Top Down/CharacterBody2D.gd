@@ -1,34 +1,36 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-
+const SPEED = 100.0
 
 
 
 func _physics_process(delta):
-
-	var horizontal_direction = Input.get_axis("ui_left", "ui_right")
-	if horizontal_direction:
-		velocity.x = horizontal_direction * SPEED
-		if horizontal_direction <0:
-			$AnimatedSprite2D.play("walk_left")
-		else:
-			$AnimatedSprite2D.play("walk_right")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	var vertical_direction = Input.get_axis("ui_up", "ui_down")
-	if vertical_direction:
-		velocity.y = vertical_direction * SPEED
-		if vertical_direction <0:
-			$AnimatedSprite2D.play("walk_up")
-		else:
-			$AnimatedSprite2D.play("walk_down")
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = SPEED
+		$AnimatedSprite2D.play("walk_right")
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = -SPEED
+		$AnimatedSprite2D.play("walk_left")
 	else:
-		velocity.y = move_toward(velocity.x, 0, SPEED)
+		velocity.x = 0
 	
-	if velocity == Vector2(0.,0.):
-		$AnimatedSprite2D.play("default")
-
+	
+	
+	if Input.is_action_pressed("ui_up"):
+		velocity.y = -SPEED
+		$AnimatedSprite2D.play("walk_up")
+		
+	elif Input.is_action_pressed("ui_down"):
+		velocity.y = SPEED
+		$AnimatedSprite2D.play("walk_down")
+	else:
+		velocity.y = 0
+	
+	
+	
+	if velocity == Vector2(0,0):
+		$AnimatedSprite2D.play("idle")
+	
 	move_and_slide()
