@@ -1,6 +1,5 @@
+[Week 1 Notes](https://github.com/bezark/SVA-Game-Design-Workshop/blob/main/Week%201%20Notes.md)
 
-# Recap
-[Week 1 Slides]()
 # Game Development with Godot
 ## Introduction and Installation (15 minutes)
 - Welcome and brief overview of the workshop
