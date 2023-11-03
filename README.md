@@ -1,3 +1,7 @@
+
+# Recap
+[Week 1 Slides]()
+# Game Development with Godot
 ## Introduction and Installation (15 minutes)
 - Welcome and brief overview of the workshop
 - Github: https://bit.ly/sva-gdf
