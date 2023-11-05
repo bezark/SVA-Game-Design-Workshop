@@ -1,8 +1,7 @@
 # Updates
 Here are at recordings from Week 2:
-
-![video](https://www.youtube.com/embed/xMl1awcnwGQ?si=-m9bEmLCU3TCm5oM)
-![video](https://www.youtube.com/embed/9N7-lsc_yEo?si=9wnwOjdxisB8KqGg)
+- [Part 1](https://www.youtube.com/embed/xMl1awcnwGQ?si=-m9bEmLCU3TCm5oM)
+- [Part 2](https://www.youtube.com/embed/9N7-lsc_yEo?si=9wnwOjdxisB8KqGg)
 
 The project I was making in class can be fround in the "GameWorkshopTestProject" folder. Enjoy!
 
