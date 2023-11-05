@@ -1,9 +1,8 @@
 # Updates
 Here are at recordings from Week 2:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xMl1awcnwGQ?si=-m9bEmLCU3TCm5oM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9N7-lsc_yEo?si=9wnwOjdxisB8KqGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![video](https://www.youtube.com/embed/xMl1awcnwGQ?si=-m9bEmLCU3TCm5oM)
+[![video](https://www.youtube.com/embed/9N7-lsc_yEo?si=9wnwOjdxisB8KqGg)
 
 The project I was making in class can be fround in the "GameWorkshopTestProject" folder. Enjoy!
 
