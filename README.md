@@ -1,4 +1,16 @@
+# Updates
+Here are at recordings from Week 2:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xMl1awcnwGQ?si=-m9bEmLCU3TCm5oM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9N7-lsc_yEo?si=9wnwOjdxisB8KqGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+The project I was making in class can be fround in the "GameWorkshopTestProject" folder. Enjoy!
+
+
 [Week 1 Notes](https://github.com/bezark/SVA-Game-Design-Workshop/blob/main/Week%201%20Notes.md)
+
+
 
 # Game Development with Godot
 ## Introduction and Installation (15 minutes)

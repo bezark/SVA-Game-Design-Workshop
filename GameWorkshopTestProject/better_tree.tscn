@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnrrgenygifqn"]
+
+[ext_resource type="Texture2D" uid="uid://ke8pia43wb42" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_uk7oq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5v0r8"]
+size = Vector2(24, 30)
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="BasicGrassBiomThings1" type="Sprite2D" parent="."]
+texture = ExtResource("1_uk7oq")
+region_enabled = true
+region_rect = Rect2(16.7284, -0.395061, 31.6049, 32.7901)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_5v0r8")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://diyhlsnkduw63"]
+
+[ext_resource type="Texture2D" uid="uid://ddr8l8ixgt5yu" path="res://icon.svg" id="1_d0fkm"]
+
+[node name="Water" type="ColorRect"]
+offset_left = 1.0
+offset_right = 342.0
+offset_bottom = 93.0
+color = Color(0.254902, 0.396078, 0.921569, 0.6)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(28, -9)
+scale = Vector2(0.390625, 0.375)
+texture = ExtResource("1_d0fkm")
