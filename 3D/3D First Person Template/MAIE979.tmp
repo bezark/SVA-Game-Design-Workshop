@@ -1,30 +1,18 @@
-[gd_scene load_steps=17 format=3 uid="uid://cpiqixjt86t5b"]
+[gd_scene load_steps=16 format=3 uid="uid://cpiqixjt86t5b"]
 
 [ext_resource type="Texture2D" uid="uid://ds7owsbo6c3jo" path="res://Textures/Metal/Metal_01-256x256.png" id="1_3ukhe"]
-[ext_resource type="PackedScene" uid="uid://cojgwvrjijkj0" path="res://player.tscn" id="1_s4oth"]
 [ext_resource type="Texture2D" uid="uid://dgixw1mp8b0je" path="res://Textures/Metal/Metal_13-256x256.png" id="2_3lc4t"]
-
-[sub_resource type="Gradient" id="Gradient_ic3xw"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_plxfc"]
-frequency = 0.001
+[ext_resource type="Script" path="res://Player.gd" id="2_u1vyc"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xoo52"]
-in_3d_space = true
-seamless = true
-seamless_blend_skirt = 1.0
-color_ramp = SubResource("Gradient_ic3xw")
-noise = SubResource("FastNoiseLite_plxfc")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pw0vr"]
-sky_top_color = Color(0.415686, 0.517647, 0.94902, 1)
+sky_top_color = Color(0.623529, 0.14902, 0.866667, 1)
 sky_horizon_color = Color(0.952941, 0.470588, 0.67451, 1)
 sky_cover = SubResource("NoiseTexture2D_xoo52")
 ground_bottom_color = Color(0.054902, 0.211765, 0.101961, 1)
 ground_horizon_color = Color(0.960784, 0.443137, 0.737255, 1)
 ground_curve = 0.03605
-sun_angle_max = 24.19
-sun_curve = 0.424264
 
 [sub_resource type="Sky" id="Sky_6k630"]
 sky_material = SubResource("ProceduralSkyMaterial_pw0vr")
@@ -32,28 +20,12 @@ sky_material = SubResource("ProceduralSkyMaterial_pw0vr")
 [sub_resource type="Environment" id="Environment_hk2fq"]
 background_mode = 2
 sky = SubResource("Sky_6k630")
-tonemap_exposure = 1.07
-ssao_enabled = true
-sdfgi_enabled = true
+tonemap_mode = 2
 glow_enabled = true
-fog_light_color = Color(0.701961, 0.478431, 0.521569, 1)
-fog_light_energy = 1.85
-fog_density = 0.0776
-fog_sky_affect = 0.465
-fog_height = -356.17
-volumetric_fog_albedo = Color(0.517647, 1, 1, 1)
-volumetric_fog_emission = Color(0.364706, 0.364706, 0.364706, 1)
-adjustment_enabled = true
-adjustment_brightness = 1.85
-adjustment_contrast = 5.0
-adjustment_saturation = 0.01
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nvxot"]
-dof_blur_far_enabled = true
-dof_blur_far_distance = 0.46
-dof_blur_near_enabled = true
-dof_blur_near_distance = 0.2
-dof_blur_amount = 0.2
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_67kdy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_au0ee"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egqhe"]
 albedo_texture = ExtResource("2_3lc4t")
@@ -94,9 +66,20 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hk2fq")
-camera_attributes = SubResource("CameraAttributesPractical_nvxot")
 
-[node name="Player" parent="." instance=ExtResource("1_s4oth")]
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_u1vyc")
+camera_sensitivity = 25
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_67kdy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_au0ee")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 
 [node name="Level" type="Node3D" parent="."]
 

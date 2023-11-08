@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://ccpvh7jjwx2kj"]
+
+[ext_resource type="PackedScene" uid="uid://sk4a61442mc4" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_A.gltf" id="1_yulsr"]
+[ext_resource type="PackedScene" uid="uid://dyh8s6l8l1dfn" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_H.gltf" id="2_4d76o"]
+[ext_resource type="PackedScene" uid="uid://biq1f5ko7n2ka" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_G.gltf" id="3_qbfyr"]
+[ext_resource type="PackedScene" uid="uid://b5cjwh7iocgcg" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F.gltf" id="4_txaho"]
+[ext_resource type="PackedScene" uid="uid://bya7bst3u3fgx" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_D.gltf" id="5_76o7u"]
+[ext_resource type="PackedScene" uid="uid://dl5ivj2d52681" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_E.gltf" id="6_swy72"]
+[ext_resource type="PackedScene" uid="uid://dssahxs0ka80p" path="res://addons/kaykit_city_builder_bits/Assets/gltf/base.gltf" id="7_a27r3"]
+[ext_resource type="PackedScene" uid="uid://cc71wlow5wasc" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_straight.gltf" id="8_mhgv2"]
+[ext_resource type="PackedScene" uid="uid://cyxs2ajeqoh5a" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trash_A.gltf" id="9_bnpai"]
+[ext_resource type="PackedScene" uid="uid://cojgwvrjijkj0" path="res://player.tscn" id="10_wdtgr"]
+
+[node name="City" type="Node3D"]
+
+[node name="Alley" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="building_A" parent="Alley" instance=ExtResource("1_yulsr")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 0, 1)
+
+[node name="building_H" parent="Alley" instance=ExtResource("2_4d76o")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 0, 0)
+
+[node name="building_G" parent="Alley" instance=ExtResource("3_qbfyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="building_F" parent="Alley" instance=ExtResource("4_txaho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="building_D" parent="Alley" instance=ExtResource("5_76o7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="building_E" parent="Alley" instance=ExtResource("6_swy72")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 0)
+
+[node name="base" parent="Alley" instance=ExtResource("7_a27r3")]
+
+[node name="road_straight" parent="Alley" instance=ExtResource("8_mhgv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="road_straight2" parent="Alley" instance=ExtResource("8_mhgv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="road_straight3" parent="Alley" instance=ExtResource("8_mhgv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="trash_A" parent="Alley" instance=ExtResource("9_bnpai")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690519, 0.0895482, 0.472847)
+
+[node name="building_D2" parent="Alley" instance=ExtResource("5_76o7u")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("10_wdtgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9952, 1.5, 0)
