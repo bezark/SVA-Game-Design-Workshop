@@ -48,8 +48,6 @@ func _input(event):
 		look_dir = event.relative*0.01
 
 func rotate_camera(delta: float, sensitivity_modifier: float = 1.0):
-	var input = Input.get_vector("look_left", "look_right", "look_down","look_up")
-	look_dir += input
 	rotation.y -= look_dir.x * camera_sensitivity* delta
 	camera.rotation.x = clamp(camera.rotation.x - look_dir.y *camera_sensitivity*sensitivity_modifier*delta, -1.5, 1.5)
 	look_dir = Vector2.ZERO
