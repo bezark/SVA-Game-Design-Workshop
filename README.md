@@ -6,8 +6,8 @@ Here are at recordings from Week 2:
 The project I was making in class can be fround in the "GameWorkshopTestProject" folder. Enjoy!
 
 
-[Week 1 Notes](https://github.com/bezark/SVA-Game-Design-Workshop/blob/main/Week%201%20Notes.md)
-[Week 2 Notes]()
+- [Week 1 Notes](https://github.com/bezark/SVA-Game-Design-Workshop/blob/main/Week%201%20Notes.md)
+- [Week 2 Notes](https://github.com/bezark/SVA-Game-Design-Workshop/blob/main/Week%202%20Notes.md)
 
 # Week 3
 
